@@ -1,0 +1,28 @@
+{
+  "name": "vue-blog",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Vue.js + Sails.js blog with SSR and JWT auth",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node server/index.js",
+    "seed": "node server/seeds/seed.js"
+  },
+  "dependencies": {
+    "@sailshq/lodash": "^3.10.6",
+    "bcryptjs": "^3.0.3",
+    "dotenv": "^17.4.2",
+    "ejs": "^5.0.2",
+    "joi": "^18.1.2",
+    "jsonwebtoken": "^9.0.3",
+    "nodemailer": "^8.0.7",
+    "sails": "^1.5.17",
+    "sails-hook-orm": "^4.0.3",
+    "sails-hook-sockets": "^3.0.0",
+    "sails-postgresql": "^5.0.1"
+  },
+  "engines": {
+    "node": "^24.12"
+  }
+}

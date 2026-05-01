@@ -1,0 +1,23 @@
+<div class="page-header">
+  <h1>Blog Posts</h1>
+  <div id="new-post-app"></div>
+</div>
+
+<div class="posts-grid">
+  <% posts.forEach(function(post) { %>
+  <div class="post-card">
+    <h2><a href="/post/<%= post.slug %>"><%= post.title %></a></h2>
+    <p class="excerpt"><%= post.body.substring(0, 200) %><%= post.body.length > 200 ? '...' : '' %></p>
+    <div class="post-meta">
+      <span><%= new Date(post.createdAt).toLocaleDateString('en-GB') %></span>
+    </div>
+  </div>
+  <% }); %>
+</div>
+
+<div id="home-app"></div>
+
+<script>
+window.__INITIAL_TOTAL__ = <%- total %>;
+window.__INITIAL_COUNT__ = <%- posts.length %>;
+</script>
